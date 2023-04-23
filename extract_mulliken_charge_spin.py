@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: iso-8859-15 -*-
 import os,math,sys
 #
@@ -87,13 +87,15 @@ while 1:
                 line=ifs.readline()
                 data=line.split()
                 ofs.write( '%2s'% data[0] + '    ' + '%2s' % data[1] + '    ' + '%9.6f' % float(data[2]) + '    ' + '%9.6f' % float(data[3]) + '\n')
+            break
 
          if data[0]=='Mulliken' and data[1]=='charges:':
             line=ifs.readline() # skip line 0
             for iii in frame:
                 line=ifs.readline()
                 data=line.split()
-                ofs.write( '%2s'% data[0] + '    ' + '%2s' % data[1] + '\n')       
+                ofs.write( '%2s'% data[0] + '    ' + '%2s' % data[1] + '\n')
+            break       
 
 
          
