@@ -94,7 +94,7 @@ while 1:
             for iii in frame:
                 line=ifs.readline()
                 data=line.split()
-                ofs.write( '%2s'% data[0] + '    ' + '%2s' % data[1] + '\n')
+                ofs.write( '%2s'% data[0] + '    ' + '%2s' % data[1] + '    ' + '%9.6f' % float(data[2]) + '\n')
             break       
 
 
